@@ -60,11 +60,15 @@ public class BlackJackActivity extends AppCompatActivity {
         playerScoreBox.setText(String.valueOf(pScore));
         dealerScoreBox.setText(String.valueOf(dScore));
 
+        playerCardImage.setImageDrawable(getResources().getDrawable(playerHand.get(playerHand.size() - 1).getImage()));
+        dealerCardImage.setImageDrawable(getResources().getDrawable(dealerHand.get(dealerHand.size() - 1).getImage()));
+
 
     }
 
     //starts a new game by resetting intent to create new blackjack activity
     public void startNewGameOnClick(View view) {
+        finish();
         Intent blackjack = new Intent(this, BlackJackActivity.class);
         startActivity(blackjack);
     }

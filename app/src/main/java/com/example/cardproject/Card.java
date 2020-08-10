@@ -1,7 +1,9 @@
 package com.example.cardproject;
 
-import android.graphics.Bitmap;
+
+import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
+
 
 public class Card {
 	//What the card is called
@@ -15,7 +17,7 @@ public class Card {
 	private boolean isFace;
 	//added in version .3, needed for war game
 	private int warValue;
-	private Bitmap image;
+	private int image;
 	
 	//default constructor
 	public Card() {
@@ -23,7 +25,7 @@ public class Card {
 	}
 	
 	//Main constructor for card object
-	public Card(String rank, int value, boolean isFace, String suite, int warValue, Bitmap image)	{
+	public Card(String rank, int value, boolean isFace, String suite, int warValue, int image)	{
 		this.rank = rank;
 		this.value = value;
 		this.isFace = isFace;
@@ -44,7 +46,7 @@ public class Card {
 	public String getSuite() {
 		return suite;
 	}
-	public Bitmap getImage() { return image;}
+	public int getImage() { return image;}
 	public String getIsFace() {
 		if(isFace) {
 			return "true";
